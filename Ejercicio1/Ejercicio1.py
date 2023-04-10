@@ -7,6 +7,9 @@ Una vez definidas estas entidades, imagine que su programa es una película esta
 class Empleado:
     def __init__(self, nombre):
         self.nombre = nombre
+    #hago la funcion asignar_empresa pq quiero y para no liarme
+    def asignar_empresa(self, empresa):
+        self.empresa = empresa
 
 class Empresa:
     def __init__(self, nombre):
@@ -21,6 +24,9 @@ class Edificio:
         self.nombre = nombre
     def asignar_ciudad(self, ciudad):
         self.ciudad = ciudad     
+#hago la funcion asignar_empresa pq quiero y para no liarme
+    def asignar_empresa(self, empresa):
+        self.empresa = empresa
 
 class Ciudad:
     def __init__(self, nombre):
@@ -40,4 +46,22 @@ edificioC = Edificio("C")
 
 ciudadNY = Ciudad("New York")
 ciudadLA = Ciudad("Los Angeles")
+
+ciudadNY.asignar_edificios([edificioA, edificioB])
+edificioA.asignar_ciudad(ciudadNY)
+edificioB.asignar_ciudad(ciudadNY)
+
+ciudadLA.asignar_edificios([edificioC])
+edificioC.asignar_ciudad(ciudadLA)
+
+empresaYH.asignar_edificios([edificioA, edificioB, edificioC])
+empresaYH.asignar_empleados([empleadoM, empleadoS, empleadoX])
+ 
+empleadoM.asignar_empresa(empresaYH)
+empleadoS.asignar_empresa(empresaYH)
+empleadoX.asignar_empresa(empresaYH)
+
+edificioA.asignar_empresa(empresaYH)
+edificioB.asignar_empresa(empresaYH)
+edificioC.asignar_empresa(empresaYH)
 
