@@ -10,6 +10,8 @@ class Empleado:
     #hago la funcion asignar_empresa pq quiero y para no liarme
     def asignar_empresa(self, empresa):
         self.empresa = empresa
+    def __del__(self):
+        print("Empleado", self.nombre ,"destruido")
 
 class Empresa:
     def __init__(self, nombre):
@@ -18,6 +20,10 @@ class Empresa:
         self.empleados = empleados
     def asignar_edificios(self, edificios):
         self.edificios = edificios
+    def __del__(self):
+        for empleado in self.empleados:
+            del(empleado)
+        print("Empresa", self.nombre ,"destruida")
         
 class Edificio:
     def __init__(self, nombre):
@@ -27,12 +33,19 @@ class Edificio:
 #hago la funcion asignar_empresa pq quiero y para no liarme
     def asignar_empresa(self, empresa):
         self.empresa = empresa
+    def __del__(self):
+        del(self.empresa)
+        print("Edificio", self.nombre ,"destruido")
 
 class Ciudad:
     def __init__(self, nombre):
         self.nombre = nombre
     def asignar_edificios(self, edificios):
-        self.edificios = edificios    
+        self.edificios = edificios 
+    def __del__(self):
+        for edificio in self.edificios:
+            del(edificio)
+        print("Ciudad", self.nombre ,"destruida")   
 
 empleadoM = Empleado("Martin")
 empleadoS = Empleado("Salim")
@@ -65,3 +78,4 @@ edificioA.asignar_empresa(empresaYH)
 edificioB.asignar_empresa(empresaYH)
 edificioC.asignar_empresa(empresaYH)
 
+del(ciudadNY)
