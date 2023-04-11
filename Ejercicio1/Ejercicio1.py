@@ -82,5 +82,5 @@ edificioB.asignar_empresa(empresaYH)
 edificioC.asignar_empresa(empresaYH)
 
 ciudadNY.destruir()
-print("---------------")
-ciudadLA.destruir()
+#print("---------------")
+#ciudadLA.destruir()
