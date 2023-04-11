@@ -17,12 +17,12 @@ yang = Yang() <br>
 yin.yang = yang <br>
  
 print(yang) <br>
->>> <__main__.Yang object at 0x1011da828> <br>
+ <__main__.Yang object at 0x1011da828> <br>
 print(yang is yin.yang) <br>
->>> True <br>
+True <br>
 del(yang) <br>
 print("?") <br>
->>> ? <br>
+ ? <br>
 Yang destruido <br>
 
 
