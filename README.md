@@ -1,4 +1,4 @@
-Ejercicios de Entrega Individual: UML Y CÓDIGO
+Link repositorio: https://github.com/lmiel/Agregacion_composicion.git
 # a. El día siguiente <br>
 Enunciado: modelar lo siguiente. Una empresa es propietaria de varios edificios y emplea a varios empleados. Un edificio está necesariamente ubicado en una ciudad y una ciudad está formada por varios edificios. Empresa, empleado, ciudad y edificio tienen cada uno un nombre. Estas ciudades incluyen New York, donde se encuentran los edificios A y B, y Los Ángeles, donde está el edificio C. Estos tres edificios son propiedad de YooHoo! que emplea a los Sres. Martin, Salim y la Sra. Xing.
 
