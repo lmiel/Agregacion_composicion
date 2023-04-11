@@ -7,23 +7,23 @@ Una vez definidas estas entidades, imagine que su programa es una película esta
 # b. ¿Inmortal? <br>
 Enunciado: Teniendo en cuenta el siguiente código, explique por qué el mensaje Yang destruido, se muestra después del signo de interrogación. ¿Qué hay que hacer para que aparezca antes?
 
-class Yin: pass 
-class Yang: 
-    def __del__(self): 
-        print("Yang destruido") 
+class Yin: pass <br>
+class Yang: <br>
+    def __del__(self): <br>
+        print("Yang destruido") <br>
  
-yin = Yin() 
-yang = Yang() 
-yin.yang = yang 
+yin = Yin() <br>
+yang = Yang() <br>
+yin.yang = yang <br>
  
-print(yang) 
->>> <__main__.Yang object at 0x1011da828> 
-print(yang is yin.yang) 
->>> True 
-del(yang) 
-print("?") 
->>> ? 
-Yang destruido 
+print(yang) <br>
+>>> <__main__.Yang object at 0x1011da828> <br>
+print(yang is yin.yang) <br>
+>>> True <br>
+del(yang) <br>
+print("?") <br>
+>>> ? <br>
+Yang destruido <br>
 
 
 # c. Alternativa a la herencia múltiple <br>
